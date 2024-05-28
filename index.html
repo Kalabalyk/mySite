@@ -1,138 +1,135 @@
 <!DOCTYPE html>
 <html lang="en" lang="ua">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MySite</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <container class="container">
-
-    <head class="heders">
-      <nav class="heders">
-        <ul class="menu">
-          <li><a href="#">Мро мене </a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySite</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Про мене</a></li>
           <li><a href="#">Блог</a></li>
           <li><a href="#">Відгуки</a></li>
-          <li><a href="#">Контакти </a></li>
+          <li><a href="#">Контакти</a></li>
         </ul>
-        <ul class="menu-messeng">
-          <li><img src="imges\facebook.png" alt="facebook" /></li>
-          <li><img src="imges\telegram.png" alt="telegram" /></li>
-          <li><img src="imges\instagram-fill.png" alt="telegram" alt="instagram">
-          </li>
-        </ul>
-      </nav>
-      <div class="abouts-my">
-        <div class="about-my-img"><img src="imges\myphoto.png" alt="myphoto" /></div>
-        <div class="about-text">
-          <h1 class="style-text-fio">Михайло Васильович</h1>
-          <h2 class="style-text-profesion">Full Stack Developer</h2>
+        <div class="social">
+          <a href="#"><img src="imges/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="imges/telegram.png" alt="Instagram" /></a>
+          <a href="#"><img src="imges/instagram.png" alt="Twitter" /></a>
         </div>
-      </div>
-      </div>
-      <div>
-
-        <div class="about-text-overview">
-          <h2>OVERVIEW</h2>
-          <p class="Lorem-tex">
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+      </nav>
+    </header>
+    <main>
+      <section class="overview">
+        <div class="profile">
+          <img
+            src="imges/profile.png"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+        </div>
+        <div class="description">
+          <h1>Михайло Васильович</h1>
+          <h2>Full Stack Developer</h2>
+          <p>
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и
             вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на
-            латинице с начала XVI века. В то время некий безымянный печатник
-            создал большую коллекцию размеров и форм шрифтов, используя Lorem
-            Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил
-            без заметных изменений пять веков, но и перешагнул в электронный
-            дизайн. Его популяризации в новое время послужили публикация листов
-            Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее
-            время, программы электронной вёрстки типа Aldus PageMaker, в
-            шаблонах которых используется Lorem Ipsum.
+            латинице с начала XVI века...
           </p>
         </div>
-    </head>
-
-
-
-
-    <main class="mains">
-      <h2>Новини</h2>
-      <div class="container-News">
-        <div class="container-new">
-          <div class="container-img"><img src="/imges/1.png" alt=""></div>
-          <div class="container-text">
-            <h3>
-              <a href="#">OpenAI официально запустила GPT Store — магазин кастомных чат-ботов</a> 
-            </h3>
-            <div class="data-info">
-              <div class="time">
-                <p>12:15</p>
+      </section>
+      <section class="blog">
+        <h2>BLOG</h2>
+        <div class="blog-post">
+          <img src="imges/GPTs.png" alt="Blog 1" />
+          <h3>OpenAI офіційно запустила GPT Store</h3>
+          <p>10 січня 2024 року</p>
+        </div>
+        <div class="blog-post">
+          <img src="imges/GPTs.png" alt="Blog 2" />
+          <h3>Авторские права на производное от ИИ</h3>
+          <p>10 січня 2024 року</p>
+        </div>
+        <div class="blog-post">
+          <img src="imges/GPTs.png" alt="Blog 3" />
+          <h3>Матрицы факторизаций</h3>
+          <p>10 січня 2024 року</p>
+        </div>
+      </section>
+      <section class="response">
+        <h2>Зворотний зв'язок</h2>
+        <form action="#">
+          <input type="text" name="name" placeholder="ім'я" required />
+          <input type="email" name="email" placeholder="email" required />
+          <textarea
+            name="message"
+            placeholder="Ваше повідомлення"
+            required
+          ></textarea>
+          <button type="submit">Відправити відгук</button>
+        </form>
+      </section>
+      <section class="reviews">
+        <h2>Відгуки</h2>
+        <div id="reviews-container">
+          <div class="review">
+            <p>
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне...
+            </p>
+            <div class="review-footer">
+              <div class="author-info">
+                <h4>Лора Медик</h4>
+                <p>05.01.2023</p>
               </div>
-              <div class="date">
-                <p>10 січня 2024 року</p>
-              </div>
+              <img src="imges/Ellipse5.png" alt="Author Image" />
             </div>
           </div>
+          <div id="reviews-container">
+          <div class="review">
+            <p>
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне...
+            </p>
+            <div class="review-footer">
+              <div class="author-info">
+                <h4>Лора Медик</h4>
+                <p>05.01.2023</p>
+              </div>
+              <img src="imges/Ellipse5.png" alt="Author Image" />
+            </div>
         </div>
-      </div>
-      <div class="forms">
-          <form>
-            <div class="form-text">
-              <label for="fname"></label>
-              <input type="text" id="fname" name="fname" value="ім'я ">
-              <label for="lname"></label>
-              <input type="email" id="email" name="email" value="email">
-              <img src="imges/photo-rounded.png" alt="додати фото">
-              <div class="submit-button"></div>
-              <input type="submit" value="Відправити відгук">
+        <div>
+          <div id="reviews-container">
+          <div class="review">
+            <p>
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне...
+            </p>
+            <div class="review-footer">
+              <div class="author-info">
+                <h4>Лора Медик</h4>
+                <p>05.01.2023</p>
               </div>
-               <div class="text-comment">
-              <textarea id="subject" name="subject" placeholder="Що Вам сподобалось..." style="height:200px; width: 100%; border-radius: 10px; padding: 10px;"></textarea>
-              </div>  
-              </div>
-              
-          </form>
-      </div>
-      <div class="review">
-        <div class="review-card">
-      <div>
-        <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник </p>
-      </div>
-      <div class="review-img-ellips"><img src="imges/Ellipse 5.png" alt=""></div>
-    
-    <div class="name-info">
-      <p>neme</p>
-      <p>date</p>
-      </div>
-      </div>
-    </div>
-    
+              <img src="imges/Ellipse5.png" alt="Author Image" />
+            </div>
+        </div>
+      </section>
     </main>
-    
-    <footer class="footers">
-       
-        <div class="footer-list">
-          <img src="imges/home.png" alt="home">
-          <p>м. Одеса Десантна 31а</p>
-        </div>
-        <div class="footer-list">
-          <img src="imges/email.png" alt="email">
-          <p>tdserver@od.ua</p>
-        </div>
-        <div class="footer-list">
-          <img src="imges/phone.png" alt="phone">
-          <p>+38 097 215 20 15</p>
-        </div>
-          
+    <footer>
+      <p>Одеса Десантна 31а</p>
+      <p>tdserver@od.ua</p>
+      <p>+38 097 215 20 15</p>
     </footer>
-    
-  </container>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
