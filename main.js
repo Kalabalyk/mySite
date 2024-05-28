@@ -1,11 +1,11 @@
 document.getElementById('feedback-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Отримання значень полів форми
     const name = event.target.name.value;
+    const email = event.target.email.value;
     const message = event.target.message.value;
-
-    // Створення нового відгуку
+    const photo = event.target.photo.files[0];
+    
     const reviewContainer = document.getElementById('reviews-container');
     const newReview = document.createElement('div');
     newReview.classList.add('review');
@@ -27,7 +27,15 @@ document.getElementById('feedback-form').addEventListener('submit', function(eve
     reviewDate.textContent = currentDate;
     
     const authorImage = document.createElement('img');
-    authorImage.src = 'imges/profile.jpg'; // Замість цього можна підставити шлях до зображення користувача, якщо доступно
+    if (photo) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            authorImage.src = e.target.result;
+        };
+        reader.readAsDataURL(photo);
+    } else {
+        authorImage.src = 'imges/profile.jpg'; // Замените на путь к изображению по умолчанию
+    }
     authorImage.alt = 'Author Image';
 
     authorInfo.appendChild(reviewAuthor);
@@ -40,6 +48,35 @@ document.getElementById('feedback-form').addEventListener('submit', function(eve
     
     reviewContainer.appendChild(newReview);
 
-    // Очищення полів форми
     event.target.reset();
 });
+
+
+
+// Механизм прокрутки 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    const reviews = document.querySelectorAll('.review');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (n > reviews.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = reviews.length }
+    
+    reviews.forEach((review, index) => {
+        review.style.display = 'none';
+        if (index >= (slideIndex - 1) * 3 && index < slideIndex * 3) {
+            review.style.display = 'block';
+        }
+    });
+    
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+    dots[slideIndex - 1].classList.add('active');
+}

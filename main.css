@@ -196,3 +196,135 @@ footer {
   font-size: 12px;
   color: #666;
 }
+
+.reviews {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#reviews-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review {
+  flex: 0 0 300px;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+/* Добавления стиля прокрутки */
+
+.reviews {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#reviews-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review {
+  flex: 0 0 300px;
+  margin-right: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Добавить фото */
+.response {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-photo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#feedback-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#feedback-form button:hover {
+  background-color: #0056b3;
+}
