@@ -17,9 +17,9 @@
       <nav>
         <ul>
           <li><a href="#">Про мене</a></li>
-          <li><a href="#">Блог</a></li>
-          <li><a href="#">Відгуки</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a href="#blog">Блог</a></li>
+          <li><a href="#feedback">Відгуки</a></li>
+          <li><a href="#phone-info">Контакти</a></li>
         </ul>
         <div class="social">
           <a href="#"><img src="imges/facebook.png" alt="Facebook" /></a>
@@ -48,7 +48,7 @@
         </div>
       </section>
       <section class="blog">
-        <h2>BLOG</h2>
+        <h2 id="blog">BLOG</h2>
         <div class="blog-post">
           <img src="imges/GPTs.png" alt="Blog 1" />
           <h3>OpenAI офіційно запустила GPT Store</h3>
@@ -67,12 +67,12 @@
       </section>
 
       <section class="response">
-    <h2>Відгук</h2>
+    <h2 id="feedback">Відгук</h2>
     <form id="feedback-form">
         <div class="name-photo-container">
             <input type="text" name="name" placeholder="Ім'я" required>
             <label for="photo-input">
-                <img src="imges/upload-icon.png" alt="Upload Icon" class="upload-icon">
+                <img src="imges/photo-rounded.png" alt="Upload Icon" class="upload-icon">
             </label>
             <input type="file" name="photo" accept="image/*" id="photo-input" style="display: none;">
         </div>
@@ -126,7 +126,7 @@
         </form>
       </section> -->
       <section class="reviews">
-        <h2>Відгуки</h2>
+        <h2 feedback-info>Відгуки</h2>
         <div id="reviews-container">
           <div class="review">
             <p>
@@ -177,7 +177,7 @@
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
     </main>
-    <footer>
+    <footer id="phone-info">
       <p>Одеса Десантна 31а</p>
       <p>tdserver@od.ua</p>
       <p>+38 097 215 20 15</p>
