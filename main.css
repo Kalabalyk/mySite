@@ -328,3 +328,65 @@ footer {
 #feedback-form button:hover {
   background-color: #0056b3;
 }
+
+/* Плавный переход блокво меню - тест */
+
+/* Для отзывов */
+.reviews-container {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Для меню */
+nav a {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+/* Для плавного перехода блоков */
+.blog-content {
+  display: none;
+  transition: opacity 1s ease, transform 1s ease;
+}
+.blog-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Футер горизонтальный */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+footer div a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer div a:hover {
+  color: #ddd;
+}
+
+/* blog-post-hover  test */
+.blog-post {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.blog-post:hover {
+  background-color: #f0f0f0;
+}
+

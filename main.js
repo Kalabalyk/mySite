@@ -80,3 +80,44 @@ function showSlides(n) {
     });
     dots[slideIndex - 1].classList.add('active');
 }
+
+
+// Плавный переход меню 
+// Отзывы
+function updateCarouselIndicators() {
+    const reviews = document.querySelectorAll('.review');
+    const indicators = document.querySelector('.carousel-indicators');
+    indicators.innerHTML = '';
+    reviews.forEach((review, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            reviews[index].scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+        });
+        indicators.appendChild(dot);
+    });
+}
+
+// Меню
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+// Переключения видимочти блока
+document.querySelectorAll('.blog-post').forEach(post => {
+    post.addEventListener('click', function() {
+        const content = this.querySelector('.post-content').innerHTML;
+        const description = document.getElementById('blog-description');
+        description.innerHTML = content;
+        description.classList.add('active');
+    });
+});
