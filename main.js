@@ -121,3 +121,7 @@ document.querySelectorAll('.blog-post').forEach(post => {
         description.classList.add('active');
     });
 });
+// Переход плавный 
+function showFullNews(element) {
+    element.classList.toggle("active");
+}

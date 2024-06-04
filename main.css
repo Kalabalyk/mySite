@@ -102,6 +102,10 @@ h1 {
   height: auto;
   border-radius: 10px;
 }
+.linka a:visited {
+color:#548EAA;
+text-decoration:none
+}
 
 form {
   display: flex;
@@ -379,6 +383,7 @@ footer div a {
 
 footer div a:hover {
   color: #ddd;
+
 }
 
 /* blog-post-hover  test */
@@ -391,3 +396,37 @@ footer div a:hover {
   background-color: #f0f0f0;
 }
 
+/* Новсти плаыный переход  04.06.2024*/
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.blog-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.blog-post {
+  border-radius: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.blog-post:hover {
+  background: #ddd;
+}
+
+.blog-full {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  text-align: left;
+}
+
+.blog-post.active .blog-full {
+  max-height: 500px; /* установите максимальную высоту по вашему усмотрению */
+}
