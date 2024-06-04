@@ -544,8 +544,5 @@ body {
   .overview {
     flex-direction: row;
   }
-  .blog-post {
-    width: 30%;
-    margin: 1%;
-  }
+
 }
