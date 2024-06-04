@@ -430,3 +430,122 @@ body {
 .blog-post.active .blog-full {
   max-height: 500px; /* установите максимальную высоту по вашему усмотрению */
 }
+
+
+/* Медиазапрос */
+
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 767px) {
+  body {
+      font-size: 14px;
+  }
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+  .header, .footer {
+      text-align: center;
+  }
+  .nav {
+      display: block;
+  }
+  .nav ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+  }
+  .nav li {
+      margin: 5px 0;
+  }
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  .header, .footer {
+    text-align: center;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .overview {
+    flex-direction: column;
+  }
+  .blog-post {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Стили для планшетов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+  .header, .footer {
+    text-align: center;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .overview {
+    flex-direction: row;
+  }
+  .blog-post {
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+
+/* Стили для ПК */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    width: 80%;
+    padding: 30px;
+  }
+  .header, .footer {
+    text-align: left;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .overview {
+    flex-direction: row;
+  }
+  .blog-post {
+    width: 30%;
+    margin: 1%;
+  }
+}
